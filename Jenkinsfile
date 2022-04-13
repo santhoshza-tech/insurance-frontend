@@ -33,6 +33,7 @@ pipeline {
           }
         }
         stage('Deploy') {
+          agent any
           environment {
             FAVORITE_COLOR = 'BLUE'
             SERVICE_CREDS = credentials('example-service-username-password')
